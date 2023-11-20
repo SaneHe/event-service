@@ -7,11 +7,11 @@ import (
 type (
 	ActionInterface interface {
 		Validate(ctx context.Context, data any) error
-		Handle(ctx context.Context, data any) error
+		Handle(ctx context.Context, data any) (any, error)
 	}
-	
+
 	ActionFactory func() ActionInterface
-	
+
 	ActionManager struct {
 		actions map[string]ActionInterface
 	}
