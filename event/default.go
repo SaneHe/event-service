@@ -5,7 +5,7 @@ import (
 	"runtime"
 )
 
-var DefaultEM = NewEventManager()
+var DefaultEM = NewManager()
 
 // On register a event and handler
 func On(name string, handler HandlerFunc) {
